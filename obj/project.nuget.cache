@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "YroXM5+TA8pjg+pIdeAelXOlFnPE65x7VzB3VdneLJdYgNGWXoZM8T+qRGU9/RsSYvmATBOQayPvKlxyShqGOw==",
+  "success": true,
+  "projectFilePath": "/Users/markroger/Azure_DevOps/CarSystem/CarSystem.csproj",
+  "expectedPackageFiles": [
+    "/Users/markroger/.nuget/packages/microsoft.netcore.app.host.osx-x64/5.0.13/microsoft.netcore.app.host.osx-x64.5.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}
