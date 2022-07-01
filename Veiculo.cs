@@ -13,10 +13,6 @@ namespace CarSystem
       public string anoVeiculo {get; set;}
       public DateTime dataLancamento {get; set;}
       public Decimal valorVeiculo {get; set;}
-
-
-      
-
     }
     
 }
