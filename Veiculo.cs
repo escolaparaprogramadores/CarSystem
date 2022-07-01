@@ -5,7 +5,6 @@ namespace CarSystem
 {
     public class Veiculo
     {
-        // CodeReview
         //Propriedades/variavel do veiculo
       public int quantidadePassageiro {get; set; }   
       public string modelo {get; set;}
@@ -13,10 +12,5 @@ namespace CarSystem
       public string anoVeiculo {get; set;}
       public DateTime dataLancamento {get; set;}
       public Decimal valorVeiculo {get; set;}
-
-
-      
-
     }
-    
 }
