@@ -26,3 +26,34 @@
 ``sh
  git pull origin main
 ``
+
+
+*Thiago*
+- Criar uma nova branch com o comando git:
+  *git checkout -b feature-thiago*
+
+- Criar classe chamada *ServicoLocacao1*
+
+- Criar as seguintes propriedades:
+*DataLocacao:DateTime*
+*ValorDiaria:Decimal*
+*QuantidadeDiaLocacao:int*
+*ValorTotalLocacao:Decimal*
+-------------------------------------------------------
+*Everton*
+- Criar uma nova branch com o comando git:
+  *git checkout -b feature-everton*
+
+- Criar classe chamada *ServicoLocacao2*
+
+- Criar as seguintes propriedades:
+*DataLocacao:DateTime*
+*ValorDiaria:Decimal*
+*QuantidadeDiaLocacao:int*
+*ValorTotalLocacao:Decimal*
+
+-------------------------------------------------------
+Depois que terminarem, usem os seguintes comandos para enviar o código para o repositório do GIT:
+1) git add .
+2) git commit -am"Finalizacao da tarefa"
+3) git push origin feature-"digite seu nome aqui"
