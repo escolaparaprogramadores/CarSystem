@@ -15,7 +15,7 @@ namespace CarSystem
             veiculo.anoVeiculo = "2022";
 
             // Obejeto 2
-            var veiculo2 = new Veiculo();
+            Veiculo veiculo2 = new Veiculo();
             veiculo.quantidadePassageiro = 6; //set
             veiculo.modelo = "Jeep";
             veiculo.iSFlex = true;

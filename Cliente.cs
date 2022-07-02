@@ -4,7 +4,6 @@ namespace CarSystem
 {
     public class Cliente
     {
-      
         //Tipos de dados      
        int QuantidadeDeFilhos {get; set;}
        string Nome {get; set;}
