@@ -12,7 +12,8 @@
 *.userosscache
 *.sln.docstates
 ShopManagement.sln
-*.sln
+*.vscode
+//*.sln
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
