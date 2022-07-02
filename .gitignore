@@ -12,6 +12,7 @@
 *.userosscache
 *.sln.docstates
 ShopManagement.sln
+*.vscode
 //*.sln
 
 # User-specific files (MonoDevelop/Xamarin Studio)
