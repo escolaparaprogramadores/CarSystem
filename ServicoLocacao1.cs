@@ -1,13 +1,27 @@
 ﻿using System;
-
-
 namespace CarSystem
 {
-   public class ServicoLocacao
+   public class ServicoLocacao1
     {
-        public DateTime DataLocacao { get; set; }
-        public decimal ValorDiaria { get; set; }
-        public int QuantidadeDiaLocacao { get; set; }
-        public decimal ValorTotalLocacao { get; set; }
+        //Construtores, constroi objetos
+          public ServicoLocacao1
+          (
+            Decimal vlrDiaria,
+            int qtdDiaLocacao
+          )
+          {
+            DataLocacao = DateTime.Now;
+            ValorDiaria = vlrDiaria;
+            QuantidadeDiaLocacao = qtdDiaLocacao;
+            ValorTotalLocacao = (vlrDiaria * qtdDiaLocacao);
+          }
+        
+        public DateTime DataLocacao { get; private set; }
+        public decimal ValorDiaria { get; private set; }
+        public int QuantidadeDiaLocacao { get; private set; }
+        public decimal ValorTotalLocacao { get; private set; }
+
+         //Métodos ou função
+        
     }
 }
