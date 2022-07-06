@@ -6,6 +6,10 @@ namespace CarSystem
     {
         static void Main(string[] args)
         {
+           new Veiculo();
+           
+
+
             //Objeto 1
            new ServicoLocacao1
            (
