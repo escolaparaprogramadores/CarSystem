@@ -3,40 +3,42 @@
 
 
 
-## Adicionando usuário e email
-- Usuário.
-``sh
+##Adicionando usuário e email
+
+- Usuário
+```sh
  git config --global user.name "SEU NOME"
 ```
+
 - Email.
-``sh
+```sh
  git config --global user.email "SEUEMAIL@example.com"
 ```
 
 ## Git clone
 - Clonando um novo projeto.
-``sh
+```sh
  git clone git@github.com:escolaparaprogramadores/CarSystem.git
 ```
 ## Git add .
 - Adicionando/removendo arquivos na stage.
-``sh
+```sh
  git add .
 ```
 ## Git commit
 - Commitando as mudanças.
-``sh
+```sh
  git commit -am"Meu primeiro commit"
 ```
 
 ## Git push
 - Enviando as mudanças para o repositório remoto.
-``sh
+```sh
  git push origin main
 ```
 ## Git pull
 - Atualizando o repositório local.
-``sh
+```sh
  git pull origin main
 ```
 
