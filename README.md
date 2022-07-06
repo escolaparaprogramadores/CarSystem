@@ -50,7 +50,7 @@
 ```sh
  git checkout -b feature-mark
 ```
-## Verifica qual branch atual
+## Verifica a branch atual
 ---
 ```sh
  git branch
