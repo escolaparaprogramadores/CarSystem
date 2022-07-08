@@ -25,7 +25,7 @@ namespace CarSystem
            );
           
 
-            Console.WriteLine("Hello World!");
+            Console.WriteLine(25*5/2+298);
         }
     }
 }
