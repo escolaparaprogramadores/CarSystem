@@ -1,4 +1,5 @@
 ﻿using System;
+using CarSystem.Dominio;
 
 namespace CarSystem
 {
@@ -6,10 +7,6 @@ namespace CarSystem
     {
         static void Main(string[] args)
         {
-           new Veiculo();
-           
-
-
             //Objeto 1
            new ServicoLocacao1
            (
