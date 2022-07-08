@@ -1,4 +1,4 @@
-namespace CarSystem
+namespace CarSystem.Dominio
 {
     public class Endereco
     {

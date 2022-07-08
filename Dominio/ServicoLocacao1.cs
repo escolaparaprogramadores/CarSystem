@@ -1,5 +1,5 @@
 ﻿using System;
-namespace CarSystem
+namespace CarSystem.Dominio
 {
    public class ServicoLocacao1
     {
