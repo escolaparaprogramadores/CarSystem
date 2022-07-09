@@ -1,4 +1,5 @@
 ﻿using System;
+using CarSystem.Dominio;
 
 namespace CarSystem
 {
@@ -6,24 +7,8 @@ namespace CarSystem
     {
         static void Main(string[] args)
         {
-           new Veiculo();
-           
-
-
             //Objeto 1
-           new ServicoLocacao1
-           (
-            200,
-            30
-           );
-
-           //Objeto 2
-           new ServicoLocacao1
-           (
-            200,
-            2
-           );
-          
+           new ServicoLocacao1(vlrDiaria: 200, qtdDiaLocacao: 30);  
 
             Console.WriteLine(25*5/2+298);
         }

@@ -1,7 +1,7 @@
 
 using System;
 
-namespace CarSystem
+namespace CarSystem.Dominio
 {
     public class Veiculo
     {
@@ -20,9 +20,7 @@ namespace CarSystem
             ISFlex = iSFlex;
             AnoVeiculo = anoVeiculo;
             DataLancamento = dataLancamento;
-            ValorVeiculo = valorVeiculo;
-
-
+            ValorVeiculo = valorVeiculo;  
         }
         //Propriedades/variavel do veiculo
       public int QuantidadePassageiro {get; set; }   
@@ -31,5 +29,10 @@ namespace CarSystem
       public string AnoVeiculo {get; set;}
       public DateTime DataLancamento {get; set;}
       public Decimal ValorVeiculo {get; set;}
+
+
+      //Metodo ou Função
+      //CalcularValorDiaria
+      //Calcular Juros
     }
 }
