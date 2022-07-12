@@ -7,13 +7,13 @@ namespace CarSystem.Dominio
         //Construtores, constroi objetos
           public ServicoLocacao1
           (
-            Decimal vlrDiaria,
+            double vlrDiaria,
             int qtdDiaLocacao
           )
           {        
             ValorDiaria = vlrDiaria;
             QuantidadeDiaLocacao = qtdDiaLocacao;
-            TaxaJuros = 10.0M;
+            TaxaJuros = 10;
             DataInicioLocacao = new DateTime(2022,07,01);
             DataFimLocacao = new DateTime(2022,07,05);
             DataEntregaLocacao = DateTime.Now;
@@ -29,16 +29,16 @@ namespace CarSystem.Dominio
         public DateTime DataInicioLocacao { get; private set; }
         public DateTime DataEntregaLocacao { get; private set; }
         public DateTime DataFimLocacao { get; private set; }
-        public decimal ValorDiaria { get; private set; }
+        public double ValorDiaria { get; private set; }
         public int QuantidadeDiaLocacao { get; private set; }
         public int QuantidadeDiasEmAtraso { get; private set; }
-        public decimal ValorTotalLocacao { get; private set; }
-        public decimal ValorTotalLocacaoComJuros { get; private set; }
+        public double ValorTotalLocacao { get; private set; }
+        public double ValorTotalLocacaoComJuros { get; private set; }
         public bool EstaEmAtraso { get; set; }
-        public decimal TaxaJuros { get; set; }
+        public double TaxaJuros { get; set; }
 
          //Métodos ou função
-        private void CalcularValorTotalLocacao(decimal vlrDiaria, int qtdDiaLocacao)
+        private void CalcularValorTotalLocacao(double vlrDiaria, int qtdDiaLocacao)
         {
           ValorTotalLocacao = (vlrDiaria * qtdDiaLocacao);
         }
@@ -57,14 +57,15 @@ namespace CarSystem.Dominio
         }
 
         private void CalcularValorTotalAPagar()
-        {
-          if(EstaEmAtraso == true)
-          {
-            var valorTotalTaxaDeJuros = (ValorDiaria * TaxaJuros) / 100;  
-            ValorTotalLocacaoComJuros = valorTotalTaxaDeJuros * QuantidadeDiasEmAtraso;
-          }
+        {              
+         //(valor)*(1 + taxa de juros)^(duração)
+         var txJuros = (TaxaJuros / 100);
+         var total = Math.Pow( (1 + txJuros), QuantidadeDiasEmAtraso);
+         var resultado = ValorTotalLocacao * total; 
 
-          Console.WriteLine($"O valor total a pagar é: {ValorTotalLocacaoComJuros}");
+         var resultadoFormatado = Math.Round(resultado, 2);
+
+          Console.WriteLine($"O valor total a pagar é: {resultadoFormatado}");
         }
     }
 }
