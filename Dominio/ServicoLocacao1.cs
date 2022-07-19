@@ -8,7 +8,8 @@ namespace CarSystem.Dominio
           public ServicoLocacao1
           (
             double vlrDiaria,
-            int qtdDiaLocacao
+            int qtdDiaLocacao,
+            Cliente cliente
           )
           {        
             ValorDiaria = vlrDiaria;
@@ -17,9 +18,7 @@ namespace CarSystem.Dominio
             DataInicioLocacao = new DateTime(2022,07,01);
             DataFimLocacao = new DateTime(2022,07,05);
             DataEntregaLocacao = DateTime.Now;
-            //QuantidadeDiasEmAtraso    
-            //ValorTotalLocacaoComJuros
-            //EstaEmAtraso
+            Cliente = cliente;
 
             CalcularDiasEmAtraso(DataFimLocacao, DataEntregaLocacao);
             CalcularValorTotalLocacao(ValorDiaria, QuantidadeDiaLocacao);
@@ -34,8 +33,11 @@ namespace CarSystem.Dominio
         public int QuantidadeDiasEmAtraso { get; private set; }
         public double ValorTotalLocacao { get; private set; }
         public double ValorTotalLocacaoComJuros { get; private set; }
-        public bool EstaEmAtraso { get; set; }
-        public double TaxaJuros { get; set; }
+        public bool EstaEmAtraso { get; private set; }
+        public double TaxaJuros { get; private set; }
+        public Cliente Cliente { get; private set; }
+
+
 
          //Métodos ou função
         private void CalcularValorTotalLocacao(double vlrDiaria, int qtdDiaLocacao)
@@ -58,14 +60,13 @@ namespace CarSystem.Dominio
 
         private void CalcularValorTotalAPagar()
         {              
-         //(valor)*(1 + taxa de juros)^(duração)
          var txJuros = (TaxaJuros / 100);
          var total = Math.Pow( (1 + txJuros), QuantidadeDiasEmAtraso);
          var resultado = ValorTotalLocacao * total; 
 
          var resultadoFormatado = Math.Round(resultado, 2);
 
-          Console.WriteLine($"O valor total a pagar é: {resultadoFormatado}");
+          Console.WriteLine($"Olá {Cliente.Nome}, o valor total a pagar é: {resultadoFormatado}");
         }
     }
 }

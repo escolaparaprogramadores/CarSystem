@@ -12,7 +12,8 @@ namespace CarSystem.Dominio
         string bairro,
         string logradouro,
         string numero,
-        string cep 
+        string cep,
+        string pontoReferencia
     )
     {
         Cidade = cidade;
@@ -20,16 +21,7 @@ namespace CarSystem.Dominio
         Logradouro = logradouro;
         Numero = numero;
         Cep = cep;
-    }
-
-    public Endereco
-    (
-        string cidade,
-        string bairro
-    )
-    {
-        Cidade = cidade;
-        Bairro = bairro;
+        PontoReferencia = pontoReferencia;
     }
 
      public string Cidade {get; private set;}
@@ -37,5 +29,6 @@ namespace CarSystem.Dominio
      public  string Logradouro {get; private set;}
      public  string Numero {get; private set;}
      public  string Cep {get; private set;}
+     public  string PontoReferencia {get; private set;}
     }
 }
