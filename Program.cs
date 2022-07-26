@@ -70,6 +70,21 @@ namespace CarSystem
             qtdDiaLocacao:28,
             cliente: clienteLola 
           );       
+       
+       
+          var retornoIdade = CalcularIdade(new DateTime(1985,12,24)); 
+          ExibirIdade(retornoIdade);
         }
+
+     private static int CalcularIdade(DateTime dataNascimento)
+     {
+      int idade = (DateTime.Now.Year - dataNascimento.Year);
+      return idade;
+     }
+
+    private static void ExibirIdade(int idade)
+    {
+      Console.WriteLine(idade);
+    }
     }
 }
